@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nishant Kumar | Resume</title>
+<meta name="description" content="Nishant Kumar, M.Sc. Analytics student at TISS Mumbai. Business analytics, Python, SQL, Power BI, machine learning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Spectral:wght@500;600&display=swap">
+<style>
+:root {
+  --bg: #EDF0EA;
+  --sheet: #FFFFFF;
+  --ink: #1B2418;
+  --muted: #55604F;
+  --rule: #D5DBCF;
+  --accent: #2F5233;
+  --serif: "Spectral", Georgia, "Times New Roman", serif;
+  --sans: "Public Sans", system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F140E; --sheet: #171E16; --ink: #E7ECE3; --muted: #A3AE9C; --rule: #2B3528; --accent: #8CBF8F;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F140E; --sheet: #171E16; --ink: #E7ECE3; --muted: #A3AE9C; --rule: #2B3528; --accent: #8CBF8F;
+}
+html { scroll-padding-top: calc(1.5rem + env(safe-area-inset-top, 0px)); }
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--sans); font-size: 1rem; line-height: 1.62;
+  -webkit-text-size-adjust: 100%;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.sheet {
+  max-width: 1080px; margin: 2rem auto; padding: 3.25rem 3.25rem 3rem;
+  background: var(--sheet); border: 1px solid var(--rule); border-radius: 4px;
+  display: grid; grid-template-columns: 15rem minmax(0, 1fr); column-gap: 3.5rem;
+}
+
+/* left rail */
+.rail { position: sticky; top: calc(2rem + env(safe-area-inset-top, 0px)); align-self: start; }
+.rail h1 {
+  font-family: var(--serif); font-weight: 600; font-size: 2.6rem; line-height: 1.04;
+  letter-spacing: -0.01em; margin: 0 0 0.9rem;
+}
+.rail .role { margin: 0 0 1.6rem; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
+.contact { list-style: none; margin: 0 0 1.8rem; padding: 0; font-size: 0.93rem; }
+.contact li { margin-bottom: 0.35rem; overflow-wrap: anywhere; }
+.nav { border-top: 1px solid var(--rule); padding-top: 1.1rem; }
+.nav ul { list-style: none; margin: 0; padding: 0; }
+.nav li { margin-bottom: 0.4rem; }
+.nav a { text-decoration: none; color: var(--ink); font-weight: 500; font-size: 0.95rem; }
+.nav a:hover { color: var(--accent); text-decoration: underline; }
+
+/* content */
+main { min-width: 0; }
+.lead { font-size: 1.08rem; line-height: 1.7; margin: 0 0 2.6rem; max-width: 68ch; }
+section { margin-bottom: 2.6rem; }
+h2 {
+  font-family: var(--serif); font-weight: 600; font-size: 1.55rem; line-height: 1.2;
+  margin: 0 0 1.2rem; padding-left: 0.8rem; border-left: 4px solid var(--accent);
+}
+.entry { margin-bottom: 1.9rem; }
+.entry:last-child { margin-bottom: 0; }
+.entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; column-gap: 1.5rem; }
+h3 { font-size: 1.08rem; font-weight: 600; margin: 0; line-height: 1.4; }
+.when { color: var(--muted); font-size: 0.92rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.where { margin: 0.1rem 0 0.6rem; color: var(--muted); font-size: 0.95rem; }
+.focus { margin: 0.2rem 0 0.35rem; font-weight: 500; }
+.tools { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.92rem; font-style: italic; }
+.entry p.body { margin: 0; max-width: 72ch; }
+.entry p.body strong { font-weight: 600; }
+
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 34rem; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.6rem 0.9rem 0.6rem 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; color: var(--muted); font-size: 0.88rem; border-bottom-color: var(--ink); }
+td:first-child { white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+dl.skills { margin: 0; display: grid; grid-template-columns: minmax(11rem, 14rem) minmax(0, 1fr); gap: 0.85rem 1.8rem; }
+dl.skills dt { font-weight: 600; }
+dl.skills dd { margin: 0; }
+
+@media (max-width: 860px) {
+  .sheet { display: block; margin: 0; padding: 1.5rem 1.25rem 2rem; border: 0; border-radius: 0; }
+  .rail { position: static; margin-bottom: 2rem; }
+  .rail h1 { font-size: 2.2rem; }
+  .nav ul { display: flex; flex-wrap: wrap; gap: 0.3rem 1.3rem; }
+  .nav li { margin: 0; }
+  dl.skills { grid-template-columns: 1fr; gap: 0.15rem 0; }
+  dl.skills dd { margin-bottom: 0.8rem; }
+}
+
+@media print {
+  @page { margin: 14mm; }
+  body { background: #fff; color: #000; font-size: 10.5pt; }
+  .sheet { display: block; margin: 0; padding: 0; border: 0; max-width: none; background: #fff; }
+  .rail { position: static; margin-bottom: 1rem; }
+  .rail h1 { font-size: 24pt; }
+  .nav { display: none; }
+  .contact { margin-bottom: 0.5rem; }
+  section, .entry { break-inside: avoid; }
+  a { color: #000; text-decoration: none; }
+  h2 { border-left-color: #000; }
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="rail">
+    <h1>Nishant Kumar</h1>
+    <p class="role">M.Sc. in Analytics, Tata Institute of Social Sciences, Mumbai</p>
+    <ul class="contact">
+      <li>Mumbai, India</li>
+      <li><a href="tel:+916201454735">+91-6201454735</a></li>
+      <li><a href="mailto:m2025anl020@stud.tiss.ac.in">m2025anl020@stud.tiss.ac.in</a></li>
+    </ul>
+    <nav class="nav" aria-label="Sections">
+      <ul>
+        <li><a href="#experience">Internships</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#leadership">Responsibility</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p class="lead">Mathematics graduate pursuing an M.Sc. in Analytics at TISS Mumbai, with hands-on experience in business analytics, customer behaviour analysis, operational reporting and data-driven problem-solving. Proficient in Python, SQL, Power BI and Excel, with experience analysing large datasets, developing interactive dashboards and identifying user behaviour patterns, business trends and improvement opportunities. Skilled in translating analytical insights into actionable recommendations, evaluating product and business performance, and supporting informed decision-making. Strong quantitative, analytical and communication skills, with a keen interest in product management, user experience and building data-driven solutions.</p>
+
+    <section id="experience" aria-labelledby="h-experience">
+      <h2 id="h-experience">Internships</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Data Analyst Intern</h3>
+          <span class="when">June 2026 – July 2026</span>
+        </div>
+        <p class="where">Harkesh Rubber LLP, Strategy and Execution Dept.</p>
+        <p class="focus">Operational &amp; Financial Intelligence: Manufacturing Loss Analytics</p>
+        <p class="tools">SQL, ERPNext</p>
+        <p class="body">Investigated production inefficiencies, rejection patterns and cost leakages by analysing ERPNext data across products, machines, shifts and production stages. <strong>Developed SQL-based analytical reports to quantify production losses, financial exposure and operational performance</strong>, converting raw data into actionable business metrics. Integrated and standardised data across multiple ERPNext sources, resolving duplicate records and data inconsistencies to <strong>strengthen data reliability and reporting accuracy</strong>. Translated analytical findings into business insights, highlighting operational bottlenecks, cost drivers and opportunities for improving production efficiency and management decision-making.</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Data Analyst Intern</h3>
+          <span class="when">Dec 2025 – Jan 2026</span>
+        </div>
+        <p class="where">Cello World Ltd., MIS Dept.</p>
+        <p class="focus">Recruitment Process Performance &amp; Analytics Dashboard</p>
+        <p class="body">Developed an interactive recruitment analytics dashboard to monitor key performance indicators (KPIs), including <strong>Time-to-Hire (TAT), SLA compliance, hiring funnel, Cost per Hire, Offer Acceptance Rate</strong> and position status. Analysed end-to-end recruitment trends, source-wise performance, hiring-stage drop-offs and process bottlenecks to identify improvement opportunities. Built a scalable star-schema data model with Power Query-based data transformation and automated refresh, centralising reporting and enabling stakeholders to track performance, investigate operational gaps and make data-driven decisions.</p>
+      </article>
+    </section>
+
+    <section id="projects" aria-labelledby="h-projects">
+      <h2 id="h-projects">Projects</h2>
+
+      <article class="entry">
+        <h3>EdTech Voice of Customer &amp; Product Intelligence</h3>
+        <p class="tools">Python, NLP, Streamlit, TF-IDF</p>
+        <p class="body">Developed a self-initiated product intelligence solution <strong>to analyse student feedback across six EdTech platforms</strong> and compare user experiences. <strong>Built a multilingual NLP pipeline using language detection, Hindi-to-English translation and BERT-based sentiment classification.</strong> Applied TF-IDF analysis to identify recurring student pain points related to video streaming, app usability and doubt-solving. Defined product KPIs, including average ratings, negative sentiment and customer feedback trends, to support product performance analysis. Built an interactive Streamlit dashboard with company, sentiment and date filters to identify improvement opportunities and support data-driven product decisions.</p>
+      </article>
+
+      <article class="entry">
+        <h3>Retailrocket Product &amp; Growth Intelligence</h3>
+        <p class="tools">Python, Streamlit, Pandas, Plotly</p>
+        <p class="body">Developed an interactive product analytics dashboard using Python and Streamlit to analyse customer journeys, user engagement and e-commerce purchase behaviour. <strong>Conducted funnel analysis across product views, cart additions and purchases to identify conversion</strong> bottlenecks and potential friction points in the customer journey. Evaluated product and category performance to identify high-engagement, low-conversion products and uncover opportunities for improving product discovery and purchase experience. Translated customer <strong>behavioural insights into product improvement recommendations</strong>, proposing A/B testing experiments to optimise conversion, cart experience and personalised product discovery.</p>
+      </article>
+
+      <article class="entry">
+        <h3>Customer Churn Retention &amp; Decision Intelligence Platform</h3>
+        <p class="tools">Python, Streamlit, XGBoost, SHAP</p>
+        <p class="body">Framed customer churn as a retention decision problem, developing a risk-scoring solution to help customer success teams identify at-risk customers and prioritise retention outreach. Analysed customer behaviour across contract types, tenure, internet services and billing patterns to identify churn drivers and uncover customer retention opportunities. Designed an explainable decision-support system with adjustable prediction thresholds, balancing churn detection against false-positive outreach costs using SHAP-based insights. Built an interactive Streamlit application featuring churn analytics, model comparison, individual customer risk assessment and bulk customer scoring with downloadable outputs.</p>
+      </article>
+    </section>
+
+    <section id="leadership" aria-labelledby="h-leadership">
+      <h2 id="h-leadership">Position of responsibility</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Placement Committee Member</h3>
+          <span class="when">Present</span>
+        </div>
+        <p class="where">TISS Mumbai</p>
+        <p class="body"><strong>Coordinate recruiters, students and institute stakeholders across recruitment drives, scheduling, industry sessions, and end-to-end placement operations</strong>, strengthening corporate engagement.</p>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <h3>Alumni &amp; Corporate Relations Committee Member</h3>
+        </div>
+        <p class="where">TISS Mumbai</p>
+        <p class="body">Supported corporate outreach, alumni engagement and partnership coordination; <strong>organized 10+ industry interaction sessions</strong> with senior industry professionals to facilitate student-industry engagement.</p>
+      </article>
+    </section>
+
+    <section id="education" aria-labelledby="h-education">
+      <h2 id="h-education">Education</h2>
+      <div class="scroll">
+        <table>
+          <thead>
+            <tr><th scope="col">Year</th><th scope="col">Degree</th><th scope="col">Institute</th><th scope="col">% / CGPA</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2025–2027</td><td>M.Sc. in Analytics</td><td>Tata Institute of Social Sciences, Mumbai</td><td>7.9*</td></tr>
+            <tr><td>2020–2023</td><td>BSc Mathematics (Hons.)</td><td>Munger University, Munger</td><td>76.12%</td></tr>
+            <tr><td>2020</td><td>HSC (12), Science</td><td>Kendriya Vidyalaya, Jamalpur</td><td>89.40%</td></tr>
+            <tr><td>2018</td><td>SSC (10)</td><td>DAV Public School, Jamalpur</td><td>85.80%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="h-skills">
+      <h2 id="h-skills">Skills</h2>
+      <dl class="skills">
+        <dt>Product &amp; Business Analytics</dt>
+        <dd>Product Performance Analysis, Customer Behaviour Analysis, KPI Tracking, Trend Analysis</dd>
+        <dt>Business Intelligence &amp; Visualization</dt>
+        <dd>Power BI, DAX, Power Query, Tableau, Advanced Excel, Matplotlib, Dashboard Development</dd>
+        <dt>Statistical Modeling</dt>
+        <dd>Hypothesis Testing, ANOVA, Chi-Square, Correlation Analysis, Statistical Inference</dd>
+        <dt>Machine Learning</dt>
+        <dd>Scikit-learn, Predictive Modeling, Model Evaluation, Regression, Classification</dd>
+      </dl>
+    </section>
+  </main>
+
+</div>
+</body>
+</html>
